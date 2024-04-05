@@ -1,0 +1,5 @@
+#taskContainer {
+    -fx-spacing: 10; /* Set vertical gap between elements */
+    -fx-padding: 10; /* Set padding around the VBox */
+    -fx-max-height: 30;
+}

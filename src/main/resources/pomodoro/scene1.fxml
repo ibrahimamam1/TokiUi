@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #4C996B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pomodoro.Controller">
+   <children>
+      <GridPane layoutX="-2.0" prefHeight="240.0" prefWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="pom" mnemonicParsing="false" onAction="#switchToPomodoro" prefHeight="43.0" prefWidth="244.0" style="-fx-background-color: #297A4A;" text="Pomodoro" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="shortBreak" mnemonicParsing="false" onAction="#switchToShortBreak" prefHeight="43.0" prefWidth="239.0" style="-fx-background-color: #7AB793;" text="Short Break" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="longBreak" mnemonicParsing="false" onAction="#switchToLongBreak" prefHeight="43.0" prefWidth="236.0" style="-fx-background-color: #7AB793;" text="Long Break" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label text="Time to Focus" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <TextField fx:id="timeArea" alignment="CENTER" prefHeight="26.0" prefWidth="232.0" style="-fx-background-color: #7AB793;-fx-text-fill: white;" text="25:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </TextField>
+            <Button fx:id="startFocusCount" mnemonicParsing="false" onAction="#startFocus" style="-fx-background-color: #7AB793;" text="Start" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </GridPane>
+      <VBox fx:id="taskContainer" layoutX="1.0" layoutY="300.0" prefHeight="30.0" prefWidth="800.0" stylesheets="@style.css" />
+   </children>
+</AnchorPane>
